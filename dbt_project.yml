@@ -1,0 +1,22 @@
+name: healthcare_revenue_mart
+version: 1.0.0
+
+profile: healthcare_revenue_mart
+
+model-paths: ["models"]
+analysis-paths: ["analyses"]
+test-paths: ["tests"]
+seed-paths: ["seeds"]
+macro-paths: ["macros"]
+snapshot-paths: ["snapshots"]
+
+clean-targets:
+  - "target"
+  - "dbt_packages"
+
+models:
+  healthcare_revenue_mart:
+    staging:
+      +materialized: view
+    marts:
+      +materialized: table

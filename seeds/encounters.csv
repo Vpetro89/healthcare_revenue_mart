@@ -1,0 +1,5 @@
+patient_id,encounter_date,department,provider_id,workload_units,productive_hours,revenue
+1,1/1/2026,PRIMARY_CARE,P100,2,2,250
+1,1/5/2026,PRIMARY_CARE,P101,1.5,1,180
+2,1/3/2026,ONCOLOGY,P200,3,2.5,600
+3,1/7/2026,ED,P300,2,1.5,400

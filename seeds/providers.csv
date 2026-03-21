@@ -1,0 +1,5 @@
+provider_id,provider_name,specialty
+P100,Dr Smith,Primary Care
+P101,Dr Jones,Primary Care
+P200,Dr Lee,Oncology
+P300,Dr Patel,Emergency
