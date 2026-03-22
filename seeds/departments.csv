@@ -2,3 +2,7 @@ department,department_name
 PRIMARY_CARE,Primary Care
 ONCOLOGY,Oncology
 ED,Emergency
+CARDIOLOGY,Cardiology
+ORTHOPEDICS,Orthopedics
+RADIOLOGY,Radiology
+NEUROLOGY,Neurology

@@ -1,5 +1,21 @@
 provider_id,provider_name,specialty
 P100,Dr Smith,Primary Care
 P101,Dr Jones,Primary Care
+P102,Dr Adams,Primary Care
+P103,Dr Brooks,Primary Care
+P104,Dr Nguyen,Primary Care
 P200,Dr Lee,Oncology
+P201,Dr Carter,Oncology
+P202,Dr Kim,Oncology
+P203,Dr Alvarez,Oncology
 P300,Dr Patel,Emergency
+P301,Dr Turner,Emergency
+P302,Dr Morris,Emergency
+P400,Dr Reed,Cardiology
+P401,Dr Flores,Cardiology
+P500,Dr Bennett,Orthopedics
+P501,Dr Cooper,Orthopedics
+P600,Dr Hughes,Radiology
+P601,Dr Powell,Radiology
+P700,Dr Simmons,Neurology
+P701,Dr Foster,Neurology
