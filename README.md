@@ -21,6 +21,7 @@ Stack
 - dbt
 - SQL
 - Power BI
+- Tableau
 - Git
 
 What this supports
