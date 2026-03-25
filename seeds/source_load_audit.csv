@@ -1,0 +1,16 @@
+load_batch_id,source_system,feed_name,load_date,expected_record_count,actual_record_count,rejected_record_count,qa_exception_count,load_status,checksum_status,sla_met_flag,notes
+BATCH-20260131-EHR-001,EHR_PRD,encounter_feed,2026-01-31,31,31,0,0,SUCCESS,PASS,Y,Daily encounter census loaded as expected
+BATCH-20260131-PBILL-001,PBILL,billing_transactions,2026-01-31,31,33,0,2,SUCCESS_WITH_WARNINGS,PASS,Y,Two duplicate or status-variant billing rows retained for QA review
+BATCH-20260131-REF-001,MDM,provider_master,2026-01-31,20,20,0,0,SUCCESS,PASS,Y,Provider reference refresh complete
+BATCH-20260131-DEPT-001,MDM,department_master,2026-01-31,7,7,0,0,SUCCESS,PASS,Y,Department reference refresh complete
+BATCH-20260131-837-001,CLAIMS_GATEWAY,claim_submission_extract,2026-01-31,31,31,0,1,SUCCESS_WITH_WARNINGS,PASS,Y,One claim held pending coding review
+BATCH-20260207-EHR-001,EHR_PRD,encounter_feed,2026-02-07,38,38,0,1,SUCCESS_WITH_WARNINGS,PASS,Y,One encounter required manual close normalization
+BATCH-20260207-PBILL-001,PBILL,billing_transactions,2026-02-07,38,40,1,3,SUCCESS_WITH_WARNINGS,PASS,Y,One malformed provider value rejected; three alias or status exceptions retained
+BATCH-20260207-835-001,CLAIMS_GATEWAY,payer_835_remit,2026-02-07,34,34,0,2,SUCCESS_WITH_WARNINGS,PASS,Y,Two remits loaded with denial reason standardization exceptions
+BATCH-20260214-EHR-001,EHR_PRD,encounter_feed,2026-02-14,45,45,0,0,SUCCESS,PASS,Y,Encounter feed on time
+BATCH-20260214-PBILL-001,PBILL,billing_transactions,2026-02-14,45,47,0,2,SUCCESS_WITH_WARNINGS,PASS,Y,Two late-posted billing rows landed outside expected cutoff
+BATCH-20260214-ADT-001,INTEGRATION_HUB,department_alias_feed,2026-02-14,11,11,0,1,SUCCESS_WITH_WARNINGS,PASS,Y,One unmapped department alias carried forward for QA flagging
+BATCH-20260219-EHR-001,EHR_PRD,encounter_feed,2026-02-19,50,50,0,0,SUCCESS,PASS,Y,Final encounter range loaded
+BATCH-20260219-PBILL-001,PBILL,billing_transactions,2026-02-19,50,58,0,8,SUCCESS_WITH_WARNINGS,PASS,Y,"Duplicate claims, orphan transactions, and missing dimensions retained for reconciliation testing"
+BATCH-20260219-835-001,CLAIMS_GATEWAY,payer_835_remit,2026-02-19,52,52,0,4,SUCCESS_WITH_WARNINGS,PASS,Y,Four denied or rejected remits queued for adjudication QA
+BATCH-20260219-MDM-001,MDM,payer_reference,2026-02-19,8,8,0,0,SUCCESS,PASS,Y,Payer master refresh complete

@@ -1,0 +1,9 @@
+payer_id,payer_name,parent_payer,plan_type,line_of_business,network_status,idr_eligible_flag,priority_rank
+PAY001,Blue Cross Blue Shield of Louisiana,Elevance,Commercial PPO,Commercial,IN_NETWORK,Y,1
+PAY002,UnitedHealthcare,UnitedHealth Group,Commercial HMO,Commercial,IN_NETWORK,Y,2
+PAY003,Aetna,CVS Health,Commercial POS,Commercial,OUT_OF_NETWORK,Y,3
+PAY004,Cigna Healthcare,The Cigna Group,Commercial PPO,Commercial,OUT_OF_NETWORK,Y,4
+PAY005,Traditional Medicare,CMS,Medicare FFS,Government,IN_NETWORK,N,5
+PAY006,Humana Medicare Advantage,Humana,Medicare Advantage,Government,IN_NETWORK,N,6
+PAY007,Louisiana Medicaid,State Medicaid,Medicaid Managed Care,Government,IN_NETWORK,N,7
+PAY008,Self Pay,Self Pay,Self Pay,Self Pay,OUT_OF_NETWORK,N,8

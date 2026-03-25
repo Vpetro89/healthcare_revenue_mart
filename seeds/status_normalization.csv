@@ -1,0 +1,10 @@
+raw_status,standard_status,is_finalized,is_billable,qa_group
+Completed,COMPLETED,Y,Y,count_as_complete
+COMPLETE,COMPLETED,Y,Y,count_as_complete
+completeD,COMPLETED,Y,Y,count_as_complete
+Posted,POSTED,Y,Y,count_as_complete
+POSTED,POSTED,Y,Y,count_as_complete
+Ready to Bill,READY_TO_BILL,N,N,work_queue
+Pending Review,PENDING_REVIEW,N,N,work_queue
+Denied,DENIED,Y,N,exception
+Voided,VOIDED,Y,N,exception

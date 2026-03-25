@@ -18,5 +18,7 @@ models:
   healthcare_revenue_mart:
     staging:
       +materialized: view
+    intermediate:
+      +materialized: view
     marts:
       +materialized: table

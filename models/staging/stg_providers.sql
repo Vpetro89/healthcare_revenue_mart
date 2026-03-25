@@ -1,1 +1,5 @@
-SELECT * FROM {{ ref('providers') }}
+select
+    upper(trim(provider_id)) as provider_id,
+    trim(provider_name) as provider_name,
+    trim(specialty) as specialty
+from {{ ref('providers') }}

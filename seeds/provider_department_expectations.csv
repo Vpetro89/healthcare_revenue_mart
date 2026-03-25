@@ -1,0 +1,21 @@
+provider_id,provider_name,specialty,expected_department,expected_department_name,active_flag
+P100,Dr Smith,Primary Care,PRIMARY_CARE,Primary Care,Y
+P101,Dr Jones,Primary Care,PRIMARY_CARE,Primary Care,Y
+P102,Dr Adams,Primary Care,PRIMARY_CARE,Primary Care,Y
+P103,Dr Brooks,Primary Care,PRIMARY_CARE,Primary Care,Y
+P104,Dr Nguyen,Primary Care,PRIMARY_CARE,Primary Care,Y
+P200,Dr Lee,Oncology,ONCOLOGY,Oncology,Y
+P201,Dr Carter,Oncology,ONCOLOGY,Oncology,Y
+P202,Dr Kim,Oncology,ONCOLOGY,Oncology,Y
+P203,Dr Alvarez,Oncology,ONCOLOGY,Oncology,Y
+P300,Dr Patel,Emergency,ED,Emergency,Y
+P301,Dr Turner,Emergency,ED,Emergency,Y
+P302,Dr Morris,Emergency,ED,Emergency,Y
+P400,Dr Reed,Cardiology,CARDIOLOGY,Cardiology,Y
+P401,Dr Flores,Cardiology,CARDIOLOGY,Cardiology,Y
+P500,Dr Bennett,Orthopedics,ORTHOPEDICS,Orthopedics,Y
+P501,Dr Cooper,Orthopedics,ORTHOPEDICS,Orthopedics,Y
+P600,Dr Hughes,Radiology,RADIOLOGY,Radiology,Y
+P601,Dr Powell,Radiology,RADIOLOGY,Radiology,Y
+P700,Dr Simmons,Neurology,NEUROLOGY,Neurology,Y
+P701,Dr Foster,Neurology,NEUROLOGY,Neurology,Y

@@ -1,0 +1,55 @@
+version: 2
+
+models:
+  - name: dim_department
+    description: Department dimension for reporting and drill through.
+    columns:
+      - name: department
+        tests:
+          - not_null
+          - unique
+
+  - name: dim_provider
+    description: Provider dimension with expected department alignment.
+    columns:
+      - name: provider_id
+        tests:
+          - not_null
+          - unique
+
+  - name: fct_encounters
+    description: Encounter grain fact table with revenue, reimbursement, and QA context.
+    columns:
+      - name: encounter_id
+        tests:
+          - not_null
+          - unique
+      - name: provider_id
+        tests:
+          - not_null
+      - name: department
+        tests:
+          - not_null
+
+  - name: mart_department_revenue_summary
+    description: Department level revenue and QA summary used by dashboard visuals.
+    columns:
+      - name: department
+        tests:
+          - not_null
+          - unique
+
+  - name: mart_provider_revenue_summary
+    description: Provider level revenue and QA summary used by dashboard visuals.
+    columns:
+      - name: provider_id
+        tests:
+          - not_null
+          - unique
+
+  - name: mart_data_quality_summary
+    description: Monthly QA issue summary exposed to BI consumers.
+    columns:
+      - name: qa_metric
+        tests:
+          - not_null

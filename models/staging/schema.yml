@@ -1,0 +1,149 @@
+version: 2
+
+models:
+  - name: stg_departments
+    description: Standardized department reference data.
+    columns:
+      - name: department
+        tests:
+          - not_null
+          - unique
+      - name: department_name
+        tests:
+          - not_null
+
+  - name: stg_providers
+    description: Standardized provider reference data.
+    columns:
+      - name: provider_id
+        tests:
+          - not_null
+          - unique
+      - name: provider_name
+        tests:
+          - not_null
+
+  - name: stg_department_aliases
+    description: Department alias crosswalk used to standardize raw billing department values.
+    columns:
+      - name: raw_department_value
+        tests:
+          - not_null
+          - unique
+      - name: standard_department
+        tests:
+          - not_null
+
+  - name: stg_status_normalization
+    description: Crosswalk used to normalize raw encounter and billing statuses.
+    columns:
+      - name: raw_status
+        tests:
+          - not_null
+          - unique
+      - name: standard_status
+        tests:
+          - not_null
+
+  - name: stg_charge_code_reference
+    description: Charge master reference used to validate billable and active charge codes.
+    columns:
+      - name: charge_code
+        tests:
+          - not_null
+          - unique
+      - name: expected_department
+        tests:
+          - not_null
+
+  - name: stg_payer_reference
+    description: Payer master used for reimbursement and IDR analytics.
+    columns:
+      - name: payer_id
+        tests:
+          - not_null
+          - unique
+      - name: payer_name
+        tests:
+          - not_null
+
+  - name: stg_provider_department_expectations
+    description: Expected provider to department mapping used for QA mismatch checks.
+    columns:
+      - name: provider_id
+        tests:
+          - not_null
+          - unique
+      - name: expected_department
+        tests:
+          - not_null
+
+  - name: stg_encounter_reference
+    description: Stable encounter key layer with encounter metadata sourced from the enterprise EHR.
+    columns:
+      - name: encounter_id
+        tests:
+          - not_null
+          - unique
+      - name: patient_id
+        tests:
+          - not_null
+
+  - name: stg_encounter_status_history
+    description: Encounter lifecycle status history used for status QA and timing checks.
+    columns:
+      - name: status_event_id
+        tests:
+          - not_null
+          - unique
+      - name: encounter_id
+        tests:
+          - not_null
+          - relationships:
+              to: "{{ ref('stg_encounter_reference') }}"
+              field: encounter_id
+
+  - name: stg_source_load_audit
+    description: Source load audit feed used to track batch completeness and QA exception counts.
+    columns:
+      - name: load_batch_id
+        tests:
+          - not_null
+          - unique
+      - name: feed_name
+        tests:
+          - not_null
+
+  - name: stg_encounters
+    description: Encounter fact input joined to stable encounter keys and provider and department context.
+    columns:
+      - name: encounter_id
+        tests:
+          - not_null
+          - unique
+      - name: provider_id
+        tests:
+          - not_null
+          - relationships:
+              to: "{{ ref('stg_providers') }}"
+              field: provider_id
+      - name: department
+        tests:
+          - not_null
+          - relationships:
+              to: "{{ ref('stg_departments') }}"
+              field: department
+
+  - name: stg_billing
+    description: Billing transactions standardized for department aliases, status normalization, and charge master validation.
+    columns:
+      - name: transaction_id
+      - name: encounter_date
+      - name: charge_code
+
+  - name: stg_claims_adjudication
+    description: Claim adjudication feed used for reimbursement, denial, and IDR analytics.
+    columns:
+      - name: claim_id
+      - name: transaction_id
+      - name: payer_id

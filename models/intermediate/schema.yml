@@ -1,0 +1,53 @@
+version: 2
+
+models:
+  - name: int_billing_reconciled
+    description: Billing transactions joined to encounter, provider expectation, and claim context with QA control flags.
+    columns:
+      - name: transaction_id
+        tests:
+          - not_null
+      - name: orphan_billing_flag
+        tests:
+          - not_null
+          - accepted_values:
+              values: ['Y', 'N']
+      - name: duplicate_transaction_flag
+        tests:
+          - not_null
+          - accepted_values:
+              values: ['Y', 'N']
+      - name: paid_greater_than_billed_flag
+        tests:
+          - not_null
+          - accepted_values:
+              values: ['Y', 'N']
+
+  - name: int_claim_reimbursement
+    description: Claim level reimbursement model tying billed, allowed, paid, and patient responsibility amounts together.
+    columns:
+      - name: claim_id
+        tests:
+          - not_null
+          - unique
+      - name: transaction_id
+        tests:
+          - not_null
+      - name: payer_id
+        tests:
+          - not_null
+
+  - name: int_data_quality_summary
+    description: Monthly QA metric summary for dashboarding and executive review.
+    columns:
+      - name: qa_metric
+        tests:
+          - not_null
+      - name: severity
+        tests:
+          - not_null
+          - accepted_values:
+              values: ['HIGH', 'MEDIUM', 'LOW']
+      - name: issue_count
+        tests:
+          - not_null

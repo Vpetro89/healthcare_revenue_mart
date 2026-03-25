@@ -1,0 +1,24 @@
+raw_department_value,standard_department,standard_department_name,mapping_status
+PRIMARY_CARE,PRIMARY_CARE,Primary Care,mapped
+PRIMARY CARE,PRIMARY_CARE,Primary Care,mapped
+Primary Care,PRIMARY_CARE,Primary Care,mapped
+ONCOLOGY,ONCOLOGY,Oncology,mapped
+ONCO,ONCOLOGY,Oncology,mapped
+Oncology,ONCOLOGY,Oncology,mapped
+ED,ED,Emergency,mapped
+Emergency,ED,Emergency,mapped
+EMERGENCY DEPT,ED,Emergency,mapped
+CARDIOLOGY,CARDIOLOGY,Cardiology,mapped
+CARDIO,CARDIOLOGY,Cardiology,mapped
+Cardiology,CARDIOLOGY,Cardiology,mapped
+ORTHOPEDICS,ORTHOPEDICS,Orthopedics,mapped
+ORTHO,ORTHOPEDICS,Orthopedics,mapped
+Orthopedics,ORTHOPEDICS,Orthopedics,mapped
+RADIOLOGY,RADIOLOGY,Radiology,mapped
+RAD,RADIOLOGY,Radiology,mapped
+Radiology,RADIOLOGY,Radiology,mapped
+NEUROLOGY,NEUROLOGY,Neurology,mapped
+NEURO,NEUROLOGY,Neurology,mapped
+Neurology,NEUROLOGY,Neurology,mapped
+SURGICAL ONC,,,unmapped
+URGENT CARE,,,unmapped

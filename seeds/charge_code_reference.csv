@@ -1,0 +1,13 @@
+charge_code,charge_description,charge_category,expected_department,expected_revenue_bucket,billable_flag,active_flag,effective_start_date,effective_end_date,standard_charge_amount,modifier_allowed_flag
+99213,"Office or other outpatient established visit, level 3",E&M,PRIMARY_CARE,Professional Fees,Y,Y,2024-01-01,,250.00,Y
+96413,"Chemotherapy administration, intravenous infusion up to 1 hour",Infusion,ONCOLOGY,Infusion Revenue,Y,Y,2024-01-01,,600.00,N
+99284,"Emergency department visit, high severity",Emergency Visit,ED,Emergency Revenue,Y,Y,2024-01-01,,400.00,N
+93000,"Electrocardiogram, routine ECG with interpretation and report",Diagnostic,CARDIOLOGY,Diagnostic Revenue,Y,Y,2024-01-01,,430.00,N
+20610,"Arthrocentesis or injection, major joint or bursa",Procedure,ORTHOPEDICS,Procedural Revenue,Y,Y,2024-01-01,,405.00,Y
+71045,"Radiologic exam, chest, single view",Imaging,RADIOLOGY,Imaging Revenue,Y,Y,2024-01-01,,260.00,N
+95816,"Electroencephalogram, including recording awake and drowsy",Diagnostic,NEUROLOGY,Diagnostic Revenue,Y,Y,2024-01-01,,540.00,N
+99214,"Office or other outpatient established visit, level 4",E&M,PRIMARY_CARE,Professional Fees,Y,Y,2024-01-01,,320.00,Y
+96365,"Intravenous infusion, initial, up to 1 hour",Infusion,ONCOLOGY,Infusion Revenue,Y,Y,2024-01-01,,525.00,N
+72148,MRI lumbar spine without contrast,Imaging,RADIOLOGY,Imaging Revenue,Y,Y,2024-01-01,,780.00,N
+93015,Cardiovascular stress test with physician supervision,Diagnostic,CARDIOLOGY,Diagnostic Revenue,Y,Y,2024-01-01,,640.00,N
+OLD710,Legacy chest x-ray code retained for historical backload only,Imaging,RADIOLOGY,Historical Revenue,N,N,2021-01-01,2024-12-31,0.00,N

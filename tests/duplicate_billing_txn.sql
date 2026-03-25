@@ -1,6 +1,6 @@
 select
-    billing_txn_id,
+    transaction_id,
     count(*) as row_count
 from {{ ref('stg_billing') }}
-group by billing_txn_id
+group by transaction_id
 having count(*) > 1
